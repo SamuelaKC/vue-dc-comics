@@ -1,10 +1,10 @@
 <template>
 <div class="container">
-    <div class="header-total">
+    <div class="content">
         <div class="logo">
             <img src="../assets/dc-logo.png" alt="">
         </div>
-        <nav>
+        <div class="navbar">
             <ul>
                 <li><a href="#">CHARACTERS</a></li>
                 <li><a href="#">COMICS</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">SHOP</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 </div>
 </template>
@@ -33,17 +33,20 @@ export default {
     @import "../style/colors.scss";
     @import "../style/fonts.scss";
 
-    .header-total {
-        margin-top: 50px;
-        display: flex;
+.content {
+    margin-top: 50px;
+    margin-bottom: 10px; 
+
 
         .logo{
             width: 40%;
             text-align: center;
             }
-        nav {
+
+        .navbar {
             flex-grow: 1;
             display: flex;
+
 
             ul {
                 display: flex;
@@ -53,8 +56,6 @@ export default {
                 font-weight: bold;
 
                 li {
-                    height: 50px;
-                    line-height: 50px;
                     padding: 0 10px;
                     
                     a {
@@ -62,11 +63,12 @@ export default {
                         text-decoration: none;
                         &:hover {
                             color: $link-color;
+                            padding-bottom: 50px;
+                            border-bottom: 5px solid #0282f9;
                         } 
                     }
                 }
             }
         }
-    }
-
+}
 </style>

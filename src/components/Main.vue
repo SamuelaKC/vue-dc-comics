@@ -1,6 +1,9 @@
 <template>
 <div class="container">
-    <div class="content"> --> Content goes here </div></div>
+    <div class="content"> 
+    <div class="main-content">--> Content goes here</div>     
+    </div>
+    </div>
     
 </template>
 
@@ -20,6 +23,13 @@ export default {
         color: $bg-font-color;
         font-weight: 700;
         font-size: 20px;
+        height: 200px;
+
+        .main-content{
+        width: 65%;
+        }
+
     }
+
 
 </style>
