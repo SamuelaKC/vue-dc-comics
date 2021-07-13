@@ -16,7 +16,6 @@ l’esercizio. */
   <div id="app">
     <Header />
     <Main />
-    <MainSectionBlue />
     <Footer />
   </div>
 </template>
@@ -24,7 +23,6 @@ l’esercizio. */
 <script>
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
-import MainSectionBlue from './components/MainSectionBlue.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -32,7 +30,6 @@ export default {
   components: {
     Header,
     Main,
-    MainSectionBlue,
     Footer,
   },
 }
@@ -40,14 +37,4 @@ export default {
 
 <style lang="scss">
 @import './style/app.scss';
-
-MainSectionBlue {
-  position: relative;
-  z-index: 20;
-}
-
-Footer {
-  position: relative;
-  z-index: 30;
-}
 </style>

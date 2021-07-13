@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <div class="content-1">
+      <MainSectionBlue />
+    </div>
+    <div class="content-2">
       <div class="footer-main-1">
         <div class="menu">
           <div class="text-title">DC COMICS</div>
@@ -47,10 +50,10 @@
       </div>
 
       <div class="footer-image">
-        <img src="../assets/dc-logo-bg.png" alt="" />
+        <img src="../assets/dc-logo-bg.png" alt="logo" />
       </div>
     </div>
-    <div class="content-2">
+    <div class="content-3">
       <div class="footer-second-1">
         <div class="button">SIGN-UP NOW!</div>
       </div>
@@ -71,8 +74,13 @@
 </template>
 
 <script>
+import MainSectionBlue from '@/components/MainSectionBlue.vue'
+
 export default {
   name: 'Footer',
+  components: {
+    MainSectionBlue,
+  },
 }
 </script>
 
@@ -81,6 +89,14 @@ export default {
 @import '../style/fonts.scss';
 
 .content-1 {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.content-2 {
+  position: relative;
+  z-index: 1;
   background-image: url(../assets/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,7 +106,7 @@ export default {
 
   [class^='footer-main-'] {
     flex-grow: 2;
-    margin-top: 20px;
+    margin-top: 50px;
 
     &:first-child {
       margin-left: 300px;
@@ -98,9 +114,6 @@ export default {
   }
 
   .footer-image {
-    text-align: right;
-    position: relative;
-    z-index: 20;
     flex-grow: 1;
     margin-right: 100px;
     width: 350px;
@@ -116,10 +129,9 @@ export default {
   }
 
   .menu {
-    width: 50%;
     list-style: none;
     font-size: 12px;
-    margin: 5px 0;
+    margin-top: 50px;
 
     a {
       color: $footer-link-color;
@@ -128,11 +140,11 @@ export default {
   }
 }
 
-.content-2 {
+.content-3 {
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: 30;
+  z-index: 2;
   height: 80px;
   background-color: $bg-color-footer;
 
