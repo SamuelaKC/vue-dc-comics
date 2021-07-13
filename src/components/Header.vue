@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content">
       <div class="logo">
-        <img src="../assets/dc-logo.png" alt="" />
+        <img src="../assets/dc-logo.png" alt="logo dc" />
       </div>
       <div class="navbar">
         <ul>
