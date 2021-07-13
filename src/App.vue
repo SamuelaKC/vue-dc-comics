@@ -15,7 +15,7 @@ l’esercizio. */
 <template>
   <div id="app">
     <Header />
-    <Main />
+    <Main :comics="comics" />
     <Footer />
   </div>
 </template>
@@ -24,6 +24,7 @@ l’esercizio. */
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
+import comicsJson from './jsons/dc-comics.json'
 
 export default {
   name: 'App',
@@ -31,6 +32,11 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data: function () {
+    return {
+      comics: comicsJson,
+    }
   },
 }
 </script>

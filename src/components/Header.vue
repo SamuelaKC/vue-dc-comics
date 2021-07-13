@@ -6,16 +6,9 @@
       </div>
       <div class="navbar">
         <ul>
-          <li><a href="#">CHARACTERS</a></li>
-          <li><a href="#">COMICS</a></li>
-          <li><a href="#">MOVIES</a></li>
-          <li><a href="#">TV</a></li>
-          <li><a href="#">GAMES</a></li>
-          <li><a href="#">COLLECTIBLES</a></li>
-          <li><a href="#">VIDEOS</a></li>
-          <li><a href="#">FANS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">SHOP</a></li>
+          <li v-for="element in LinksMenu" :key="element.id">
+            <a :href="element.link">{{ element.name }}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -25,6 +18,62 @@
 <script>
 export default {
   name: 'Header',
+  data: function () {
+    return {
+      LinksMenu: [
+        {
+          id: 0,
+          href: '#',
+          name: 'CHARACTERS',
+        },
+        {
+          id: 1,
+          href: '#',
+          name: 'COMICS',
+        },
+        {
+          id: 2,
+          href: '#',
+          name: 'MOVIES',
+        },
+        {
+          id: 3,
+          href: '#',
+          name: 'TV',
+        },
+        {
+          id: 4,
+          href: '#',
+          name: 'GAMES',
+        },
+        {
+          id: 5,
+          href: '#',
+          name: 'COLLECTIBLES',
+        },
+        {
+          id: 6,
+          href: '#',
+          name: 'VIDEOS',
+        },
+        {
+          id: 7,
+          href: '#',
+          name: 'FANS',
+        },
+        {
+          id: 8,
+          href: '#',
+          name: 'NEWS',
+        },
+        {
+          id: 9,
+          href: '#',
+          name: 'SHOP',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -50,7 +99,7 @@ export default {
       list-style: none;
       justify-content: center;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 700;
 
       li {
         padding: 0 10px;
@@ -62,6 +111,7 @@ export default {
             color: $link-color;
             padding-bottom: 50px;
             border-bottom: 5px solid $bg-color-blue;
+            cursor: pointer;
           }
         }
       }

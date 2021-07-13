@@ -1,14 +1,34 @@
 <template>
   <div class="container">
     <div class="content">
-      <div class="main-content">--> Content goes here</div>
+      <div class="row">
+        <CardComic
+          v-for="(element, index) in comics"
+          :key="index"
+          :thumb="element.thumb"
+          :price="element.price"
+          :series="element.series"
+          :type="element.type"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import CardComic from '@/components/CardComic.vue'
+
 export default {
   name: 'Main',
+  components: {
+    CardComic,
+  },
+  props: {
+    comics: Array,
+  },
+  created() {
+    console.log(this.comics)
+  },
 }
 </script>
 
@@ -21,7 +41,13 @@ export default {
   color: $bg-font-color;
   font-weight: 700;
   font-size: 20px;
-  height: 200px;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
   .main-content {
     width: 65%;
