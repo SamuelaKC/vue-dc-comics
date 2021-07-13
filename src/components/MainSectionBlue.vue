@@ -80,7 +80,6 @@ export default {
     align-items: center;
     font-size: 14px;
     padding: 0 10px;
-    max-height: 50px;
 
     .container-link {
       margin-right: 40px;
@@ -91,9 +90,6 @@ export default {
         align-items: center;
         color: $bg-font-color;
         text-decoration: none;
-        img {
-          width: 100%;
-        }
       }
 
       .container-text {
@@ -101,10 +97,9 @@ export default {
       }
 
       .container-image {
-        max-width: 40px;
         border: 10px;
         img {
-          width: 100%;
+          height: 50px;
         }
       }
     }
