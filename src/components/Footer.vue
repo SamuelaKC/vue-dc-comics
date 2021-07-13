@@ -5,7 +5,7 @@
     </div>
     <div class="content-2">
       <div class="footer-main-1">
-        <div class="menu">
+        <div class="menu-1">
           <div class="text-title">DC COMICS</div>
           <div><a href="#">Characters</a></div>
           <div><a href="#">Comics</a></div>
@@ -15,14 +15,14 @@
           <div><a href="#">News</a></div>
         </div>
 
-        <div class="menu">
+        <div class="menu-2">
           <div class="text-title">SHOP</div>
           <div><a href="#">Shop DC</a></div>
           <div><a href="#">Shop DC Collectibles</a></div>
         </div>
       </div>
       <div class="footer-main-2">
-        <div class="menu">
+        <div class="menu-1">
           <div class="text-title">DC</div>
           <div><a href="#">Terms Of Use</a></div>
           <div><a href="#">Privacy podivcy (New)</a></div>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="footer-main-3">
-        <div class="menu">
+        <div class="menu-1">
           <div class="text-title">SITES</div>
           <div><a href="#">DC</a></div>
           <div><a href="#">MAD Magazine</a></div>
@@ -91,32 +91,30 @@ export default {
 .content-1 {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .content-2 {
-  position: relative;
-  z-index: 1;
   background-image: url(../assets/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: space-around;
 
   [class^='footer-main-'] {
     flex-grow: 2;
-    margin-top: 50px;
+    margin-top: 70px;
 
     &:first-child {
-      margin-left: 300px;
+      margin-left: 350px;
     }
   }
 
   .footer-image {
     flex-grow: 1;
     margin-right: 100px;
-    width: 350px;
+    width: 450px;
     img {
       width: 100%;
     }
@@ -128,15 +126,26 @@ export default {
     font-weight: 700;
   }
 
-  .menu {
+  [class^='menu-'] {
     list-style: none;
     font-size: 12px;
-    margin-top: 50px;
+
+    div {
+      padding-top: 10px;
+    }
 
     a {
       color: $footer-link-color;
       text-decoration: none;
     }
+  }
+
+  .menu-1 {
+    margin-top: 75px;
+  }
+
+  .menu-2 {
+    margin-top: 25px;
   }
 }
 
@@ -144,7 +153,7 @@ export default {
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 80px;
   background-color: $bg-color-footer;
 

@@ -82,10 +82,6 @@ export default {
     padding: 0 10px;
     max-height: 50px;
 
-    img {
-      width: 100%;
-    }
-
     .container-link {
       margin-right: 40px;
 
@@ -95,6 +91,9 @@ export default {
         align-items: center;
         color: $bg-font-color;
         text-decoration: none;
+        img {
+          width: 100%;
+        }
       }
 
       .container-text {
@@ -102,8 +101,11 @@ export default {
       }
 
       .container-image {
-        max-width: 50px;
-        margin: 25px;
+        max-width: 40px;
+        border: 10px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
