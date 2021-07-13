@@ -98,7 +98,7 @@ export default {
   background-image: url(../assets/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 470px;
   display: flex;
   justify-content: space-around;
 
@@ -141,7 +141,7 @@ export default {
   }
 
   .menu-1 {
-    margin-top: 75px;
+    margin-top: 60px;
   }
 
   .menu-2 {
