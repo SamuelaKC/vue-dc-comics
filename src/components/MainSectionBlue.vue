@@ -47,7 +47,7 @@
       </div>
       <div class="container-link">
         <a href="#">
-          <div class="container-image">
+          <div class="container-image-visa">
             <img src="../assets/buy-dc-power-visa.svg" alt="DC POWER VISA" />
           </div>
           <div class="container-text">DC POWER VISA</div>
@@ -100,6 +100,12 @@ export default {
         border: 10px;
         img {
           height: 50px;
+        }
+      }
+      .container-image-visa {
+        border: 10px;
+        img {
+          width: 50px;
         }
       }
     }
