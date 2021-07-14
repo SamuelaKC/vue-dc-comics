@@ -21,7 +21,7 @@ export default {
   name: 'CardComic',
   props: {
     thumb: String,
-    price: Number,
+    price: String,
     series: String,
     type: String,
   },
