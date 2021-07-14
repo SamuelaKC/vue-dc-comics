@@ -17,8 +17,13 @@
 
 <script>
 export default {
+  //il menu è meglio metterlo in app.vue quindi è da spostare
   name: 'Header',
-  data: function () {
+  props: {
+    //questa parte prende da app.vue - ricordarsi di metterla quando il "database" è in app.vue
+    LinksMenu: Array,
+  },
+  /* data: function () {
     return {
       LinksMenu: [
         {
@@ -71,9 +76,9 @@ export default {
           href: '#',
           name: 'SHOP',
         },
-      ],
+      ], 
     }
-  },
+  }, */
 }
 </script>
 

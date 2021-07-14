@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import CardComic from '@/components/CardComic.vue'
+import CardComic from '../components/CardComic.vue'
 
 export default {
   name: 'Main',

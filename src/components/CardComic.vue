@@ -1,14 +1,16 @@
 <template>
-  <div class="col-2">
-    <div class="comic-container">
-      <div
-        class="container-img"
-        :style="{ backgroundImage: 'url(' + thumb + ')' }"
-      ></div>
-      <div class="container-text">
-        <div>{{ series.toUpperCase() }}</div>
-        <div>{{ price }}</div>
-        <div>{{ type }}</div>
+  <div class="container">
+    <div class="col-2">
+      <div class="comic-container">
+        <div
+          class="container-img"
+          :style="{ backgroundImage: 'url(' + thumb + ')' }"
+        ></div>
+        <div class="container-text">
+          <div>{{ series.toUpperCase() }}</div>
+          <div>{{ price }}</div>
+          <div>{{ type }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ export default {
 @import '../style/colors.scss';
 @import '../style/fonts.scss';
 
-.col-2 {
+.container {
   width: calc((100% / 6) - 40px);
   padding: 30px 0;
 

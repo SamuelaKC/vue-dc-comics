@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import MainSectionBlue from '@/components/MainSectionBlue.vue'
+import MainSectionBlue from '../components/MainSectionBlue.vue' //usi .. perchè non è nella cartella principale o @ al posto dei ..
 
 export default {
   name: 'Footer',

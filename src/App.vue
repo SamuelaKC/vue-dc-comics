@@ -14,7 +14,7 @@ l’esercizio. */
 
 <template>
   <div id="app">
-    <Header />
+    <Header :LinksMenu="LinksMenu" />
     <Main :comics="comics" />
     <Footer />
   </div>
@@ -24,7 +24,7 @@ l’esercizio. */
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
-import comicsJson from './jsons/dc-comics.json'
+import comicsJson from './jsons/dc-comics.json' //il json deve essere sempre in app.vue ossia la pagina principale
 
 export default {
   name: 'App',
@@ -36,6 +36,58 @@ export default {
   data: function () {
     return {
       comics: comicsJson,
+      LinksMenu: [
+        {
+          id: 0,
+          href: '#',
+          name: 'CHARACTERS',
+        },
+        {
+          id: 1,
+          href: '#',
+          name: 'COMICS',
+        },
+        {
+          id: 2,
+          href: '#',
+          name: 'MOVIES',
+        },
+        {
+          id: 3,
+          href: '#',
+          name: 'TV',
+        },
+        {
+          id: 4,
+          href: '#',
+          name: 'GAMES',
+        },
+        {
+          id: 5,
+          href: '#',
+          name: 'COLLECTIBLES',
+        },
+        {
+          id: 6,
+          href: '#',
+          name: 'VIDEOS',
+        },
+        {
+          id: 7,
+          href: '#',
+          name: 'FANS',
+        },
+        {
+          id: 8,
+          href: '#',
+          name: 'NEWS',
+        },
+        {
+          id: 9,
+          href: '#',
+          name: 'SHOP',
+        },
+      ],
     }
   },
 }
